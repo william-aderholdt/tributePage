@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<style>
+* {
+    box-sizing: border-box;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+main {
+    padding-top: 20px;
+    margin: auto;
+    display: center;
+    overflow: hidden;
+}
+.intro-div {
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+}
+.img-div {
+    height: auto;
+    width: 100%;
+    margin: auto;
+    display: center;
+    text-align: center;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.content-div {
+    width: 100%;
+    height: auto;
+    display: grid;
+    text-align: justify;
+}
+@media (max-width: 599px) {
+    .content-div {
+        grid-template-columns: 0px 100% 0px;
+    }
+}
+@media (min-width: 600px) {
+    .content-div {
+        grid-template-columns: auto 600px auto;
+    }
+}
+.grid-center {
+    grid-column: 2;
+}
+
+</style>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device width, initial-scale=1">
+    </head>
+    <main id="main">
+        <title id="title">
+            Maurice Hilleman Tribute Page
+        </title>
+        <body>
+            <div class="row col-1 col-2 col-3 col-9 col-10 col-11 col-12" id="intro">     
+                <h1 class="col-4 col-5 col-6 col-7 col-8 col-9 intro-div">
+                    Dr. Maurice Hilleman<br>(<em>1919-2005</em>)
+                </h1>
+            </div>
+            <div class="row col-1 col-2 col-3 col-9 col-10 col-11 col-12" id="img-div">
+                <div class="col-4 col-5 col-6 col-7 col-8 col-9 img-div">
+                    <img src="http://www.xvivo.net/wp-content/uploads/bj.jpg" alt="Maurice Hilleman holding a pea tree dish in his right hand." id="image">
+                    <p id="img-caption">Maurice Hilleman pictured here with a pea-tree dish.</p>
+                </div>
+            </div>  
+            <div class="row" id="content-div">
+                <div class="col-4 col-5 col-6 col-7 col-8 col-9 content-div" id="tribute-info">
+                    <div class="grid-center">
+                        <p>A native of Montana who was born in Miles City in 1919. He created 40 vaccines -- many of which are still in use today.</p>
+                        <h3>Notable Achievements:</h3>
+                        <ul>
+                            <li><b>1963 -</b> Developed the vaccination for mumps after his daughter contracted the disease.</li>
+                            <li><b>1981 -</b> Created the vaccination for hepatitis B, this was later withdrawn from the United States in 1986.</li>
+                        </ul>
+                        <p><em>"If I had to name a person who has done more for the benefit of human health, with less recognition than anyone else, it would be Maurice Hilleman. -Robert Gallo</em></p>
+                        <p>For more information regarding Maurice Hilleman, please see the <a href="https://en.wikipedia.org/wiki/Maurice_Hilleman" target="_blank" id="tribute-link">wikipedia article</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </body>
+        <footer>
+            <p></p>
+        </footer>
+    </main>  
+</html>
